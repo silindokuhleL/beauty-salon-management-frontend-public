@@ -4,7 +4,7 @@ Next.js frontend for a multi-tenant beauty salon management platform. The app su
 
 This repository pairs with the Laravel API backend:
 
-- Backend: `https://github.com/silindokuhleL/beauty-salon-management-backend`
+- Backend: `https://github.com/silindokuhleL/beauty-salon-management-backend-public`
 
 ## What This Project Shows
 

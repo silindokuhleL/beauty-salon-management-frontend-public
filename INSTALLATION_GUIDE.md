@@ -13,12 +13,12 @@
 ## 2. Clone Repositories
 ```bash
 # Backend
-git clone https://github.com/your-org/beauty-salon-management-backend.git
-cd beauty-salon-management-backend
+git clone https://github.com/silindokuhleL/beauty-salon-management-backend-public.git
+cd beauty-salon-management-backend-public
 
 # Frontend (separate workspace)
-git clone https://github.com/your-org/beauty-salon-management-frontend.git
-cd beauty-salon-management-frontend
+git clone https://github.com/silindokuhleL/beauty-salon-management-frontend-public.git
+cd beauty-salon-management-frontend-public
 ```
 
 ## 3. Backend Setup (Laravel)
