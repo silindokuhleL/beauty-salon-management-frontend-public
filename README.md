@@ -122,6 +122,7 @@ The frontend expects the Laravel API to provide:
 
 Additional local documentation:
 
+- `PROOF_CAPTURE_GUIDE.md`
 - `SYSTEM_REQUIREMENTS.md`
 - `TECHNICAL_DOCUMENTATION.md`
 - `USER_INTERFACE_GUIDE.md`
@@ -141,3 +142,5 @@ Recommended proof to add next before calling the project fully portfolio-ready:
 - Super-admin provider approval screenshots.
 - Mobile screenshots for public booking, login, customer dashboard, and admin dashboard.
 - A short walkthrough video showing the full booking-to-payment flow.
+
+See `PROOF_CAPTURE_GUIDE.md` for the exact route, account, viewport, and filename checklist.
