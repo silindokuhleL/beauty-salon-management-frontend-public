@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import axios from '@/lib/axios'
 import type { Service, GuestBookingData, AvailableSlots } from '@/types'
 
@@ -12,7 +12,7 @@ export const useGuest = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
 
-    const getServices = async () => {
+    const getServices = useCallback(async () => {
         setLoading(true)
         setError(null)
         try {
@@ -25,9 +25,9 @@ export const useGuest = () => {
         } finally {
             setLoading(false)
         }
-    }
+    }, [])
 
-    const submitBooking = async (bookingData: BookingData) => {
+    const submitBooking = useCallback(async (bookingData: BookingData) => {
         setLoading(true)
         setError(null)
         try {
@@ -40,9 +40,9 @@ export const useGuest = () => {
         } finally {
             setLoading(false)
         }
-    }
+    }, [])
 
-    const getAvailableSlots = async (date: string, tenantId: string): Promise<AvailableSlots> => {
+    const getAvailableSlots = useCallback(async (date: string, tenantId: string): Promise<AvailableSlots> => {
         setLoading(true)
         setError(null)
         try {
@@ -55,9 +55,9 @@ export const useGuest = () => {
         } finally {
             setLoading(false)
         }
-    }
+    }, [])
 
-    const getBookingByReference = async (reference: string) => {
+    const getBookingByReference = useCallback(async (reference: string) => {
         setLoading(true)
         setError(null)
         try {
@@ -70,7 +70,7 @@ export const useGuest = () => {
         } finally {
             setLoading(false)
         }
-    }
+    }, [])
 
     return {
         loading,

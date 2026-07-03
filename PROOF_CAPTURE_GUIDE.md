@@ -43,15 +43,15 @@ Capture these images for portfolio, README, LinkedIn, and case-study proof.
 | Done | `beauty-salon-owner-dashboard.png` | `/admin/admin-dashboard` | Owner | Tenant owner dashboard, metrics, reports, admin navigation |
 | Done | `beauty-salon-payment-management.png` | `/admin/payments` | Owner | Card/cash payment management, revenue cards, refunds, mark-paid actions |
 | Done | `beauty-salon-services-marketplace.png` | `/customer/services-marketplace` | Customer | Customer marketplace, service cards, discounts, booking calls to action |
-| Pending | `beauty-salon-booking-confirmation.png` | `/customer/booking-confirmation` | Customer | Completed booking state, reference, service, staff, date/time |
+| Done | `beauty-salon-booking-confirmation.png` | `/booking-confirmation?ref=DEMO-BOOK-001` | Public/customer proof | Completed booking state, reference, service, date/time |
 | Pending | `beauty-salon-payment-callback.png` | `/payment-callback` | Customer | Payment callback/verification handling |
-| Pending | `beauty-salon-product-sales.png` | `/admin/product-sales` | Owner | POS product sales, tenant-scoped stock, sales history |
-| Pending | `beauty-salon-product-marketplace.png` | `/customer/products` | Customer | Customer product browsing and purchase flow |
-| Pending | `beauty-salon-provider-approval.png` | `/super-admin/providers` | Super Admin | Provider approval/rejection/suspension workflow |
-| Pending | `beauty-salon-staff-leave.png` | `/admin/staff-leave` | Owner | Leave approval, rejection, affected appointments, reassignment |
-| Pending | `beauty-salon-user-permissions.png` | `/admin/users` | Owner | Role-aware user management and permission boundaries |
-| Pending | `beauty-salon-mobile-booking.png` | `/customer/book` | Customer/mobile | Mobile booking responsiveness |
-| Pending | `beauty-salon-mobile-admin.png` | `/admin/admin-dashboard` | Owner/mobile | Authenticated dashboard responsiveness |
+| Done | `beauty-salon-product-sales.png` | `/admin/product-sales` | Owner | POS product sales, tenant-scoped stock, sales totals, cart state |
+| Done | `beauty-salon-product-marketplace.png` | `/customer/products` | Customer | Customer product browsing route and empty-state handling |
+| Done | `beauty-salon-provider-approval.png` | `/super-admin/providers` | Super Admin | Provider approval/rejection/suspension workflow |
+| Done | `beauty-salon-staff-leave.png` | `/admin/staff-leave` | Owner | Leave approval, rejection, affected appointments, reassignment |
+| Done | `beauty-salon-user-permissions.png` | `/admin/users` | Owner | Role-aware user management and permission boundaries |
+| Done | `beauty-salon-mobile-customer-services.png` | `/customer/services-marketplace` | Customer/mobile | Mobile services responsiveness at 390px |
+| Done | `beauty-salon-mobile-customer-products.png` | `/customer/products` | Customer/mobile | Mobile products responsiveness at 390px |
 
 ## Suggested Viewports
 
@@ -82,6 +82,12 @@ Tablet:
 - Keep filenames stable so the portfolio and README can link to them later.
 - After any code change, rerun `npm run lint`, `npm run build`, and `npm audit --omit=dev`.
 
+## Browser Verification Notes
+
+- 2026-07-03: bundled Browser was used to log in as Owner, Customer, and Super Admin.
+- Browser testing found and fixed a `CommandSearch` render loop, malformed product image URL crashes in `AppImage`, and a `useGuest` hook loop on booking confirmation.
+- Verification after the fixes: `npm run lint` and `npm run build` pass.
+
 ## Portfolio Story Order
 
 1. Super Admin dashboard: platform control.
@@ -92,4 +98,3 @@ Tablet:
 6. Staff leave: operational workflow.
 7. Provider approval and users: governance and RBAC.
 8. Mobile views: responsive product quality.
-

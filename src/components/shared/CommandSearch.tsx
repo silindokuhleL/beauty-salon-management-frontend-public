@@ -80,7 +80,8 @@ export default function CommandSearch({ isOpen, onClose }: CommandSearchProps) {
                 }
             }, 300)
         } else {
-            setResults([])
+            setResults(prev => prev.length > 0 ? [] : prev)
+            setSelectedIndex(prev => prev === 0 ? prev : 0)
         }
 
         return () => {

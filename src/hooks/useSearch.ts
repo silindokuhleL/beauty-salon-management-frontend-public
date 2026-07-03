@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import axios from '@/lib/axios'
 import type {
     SearchFilters,
@@ -60,7 +60,7 @@ export const useSearch = () => {
         }
     }
 
-    const globalSearch = async (query: string, limit: number = 10): Promise<GlobalSearchResult[]> => {
+    const globalSearch = useCallback(async (query: string, limit: number = 10): Promise<GlobalSearchResult[]> => {
         if (!query.trim()) return []
         
         setLoading(true)
@@ -78,7 +78,7 @@ export const useSearch = () => {
         } finally {
             setLoading(false)
         }
-    }
+    }, [])
 
     const searchAppointments = async (query: string, limit: number = 5) => {
         setLoading(true)
